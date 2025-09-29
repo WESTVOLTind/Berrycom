@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded", function() { var e = document.getElementById("cookie-notice"),
+        t = document.getElementById("accept-cookies");!localStorage.getItem("cookiesAccepted") && setTimeout(function() { e.style.display = "flex" }, 5e3), t.addEventListener("click", function() { localStorage.setItem("cookiesAccepted", "true"), e.style.display = "none" }) });
