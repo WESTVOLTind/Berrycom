@@ -1,0 +1,68 @@
+# Robots.txt file for Berrycom Ltd Website
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /user/
+Disallow: /account/
+Disallow: /private/
+Disallow: /config/
+Disallow: /cgi-bin/
+Disallow: /scripts/
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /sensitive-data/
+Disallow: /test-environment/
+Disallow: /staging/
+Disallow: /assets/vendor/
+Disallow: /assets/css/styles.css
+
+# Block specific file types that should not be indexed
+Disallow: /*.php$
+Disallow: /*.cgi$
+Disallow: /*.pl$
+Disallow: /*.py$
+Disallow: /*.sh$
+Disallow: /*.log$
+Disallow: /*.bak$
+Disallow: /*.old$
+Disallow: /*.css$
+Disallow: /*.js$
+
+# Prevent crawling of URL parameters to avoid duplicate content issues
+Disallow: /*?sessionid=
+Disallow: /*?trackingid=
+
+# Allow the important sections of the website to be crawled
+Allow: /index.html
+Allow: /portfolio-1.html
+Allow: /portfolio-2.html
+Allow: /portfolio-3.html
+Allow: /portfolio-4.html
+Allow: /portfolio-5.html
+Allow: /portfolio-6.html
+Allow: /privacy-policy.html
+Allow: /terms-of-service.html
+
+# Sitemap locations for better indexing
+Sitemap: https://www.berrycom.co.ke/image-sitemap.xml
+Sitemap: https://www.berrycom.co.ke/another-sitemap.xml  # <-- Replace this with your additional sitemap URL
+
+# Block crawlers known for malicious activity
+User-agent: BadBot
+Disallow: /
+
+User-agent: EvilScraper
+Disallow: /
+
+User-agent: DataHarvester
+Disallow: /
+
+# Crawl-delay to reduce server load
+Crawl-delay: 10
+
+# Disallow bots from indexing the robots.txt file itself
+Noindex: /robots.txt
