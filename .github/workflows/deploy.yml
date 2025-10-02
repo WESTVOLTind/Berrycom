@@ -3,7 +3,7 @@ name: Deploy to Google Cloud Storage
 on:
   push:
     branches:
-      - main   # change this if your repo uses 'master'
+      - main   # or 'master' if that's your default
 
 jobs:
   deploy:
@@ -22,4 +22,4 @@ jobs:
 
       - name: Deploy to GCS
         run: |
-          gsutil -m rsync -r ./ gs://berrycom.co.ke
+          gsutil -m rsync -r ./ gs://www.berrycom.co.ke
